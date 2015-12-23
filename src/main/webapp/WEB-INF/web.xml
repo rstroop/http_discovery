@@ -1,0 +1,18 @@
+<web-app>
+    <display-name>ActiveMQ HTTP Discovery Web Application</display-name>
+        <description>
+            Provides an HTTP based dsicovery registry servlet
+        </description>
+
+        <!-- servlet mappings -->
+        <servlet>
+            <servlet-name>DiscoveryRegistryServlet</servlet-name>
+            <servlet-class>org.apache.activemq.transport.discovery.http.DiscoveryRegistryServlet</servlet-class>
+            <load-on-startup>1</load-on-startup>
+        </servlet>
+
+        <servlet-mapping>
+            <servlet-name>DiscoveryRegistryServlet</servlet-name>
+            <url-pattern>/*</url-pattern>
+        </servlet-mapping>
+</web-app>
